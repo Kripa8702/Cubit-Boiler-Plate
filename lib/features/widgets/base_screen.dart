@@ -26,6 +26,7 @@ class BaseScreen extends StatelessWidget {
     this.title,
     this.showBackButton = false,
     this.verticalPadding = 0,
+    this.horizontalPadding = 0,
   });
 
   final Widget child;
@@ -33,6 +34,7 @@ class BaseScreen extends StatelessWidget {
   final String? title;
   final bool? showBackButton;
   final double verticalPadding;
+  final double horizontalPadding;
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +64,7 @@ class BaseScreen extends StatelessWidget {
           width: double.maxFinite,
           child: Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: 16.w,
+              horizontal: horizontalPadding.w,
               vertical: verticalPadding.h,
             ),
             child: child,
@@ -73,7 +75,7 @@ class BaseScreen extends StatelessWidget {
   );
 
   Widget get appBar => Padding(
-    padding: EdgeInsets.symmetric(horizontal: 16.w),
+    padding: EdgeInsets.symmetric(horizontal: horizontalPadding.w),
     child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,

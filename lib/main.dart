@@ -11,6 +11,11 @@ import 'package:package_info_plus/package_info_plus.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  /// add this after running 'firebase init' in the terminal
+  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform );
+
+
   await dotenv.load(fileName: ".env");
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [
     SystemUiOverlay.top,

@@ -1,4 +1,4 @@
-import 'package:event_ticketing/utils/size_utils.dart';
+import 'package:cubit_boiler_plate/utils/size_utils.dart';
 import 'package:flutter/material.dart';
 
 class PaginationListWidget extends StatefulWidget {

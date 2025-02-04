@@ -3,6 +3,7 @@ import 'package:cubit_boiler_plate/features/auth/features/welcome/view/welcome_s
 import 'package:cubit_boiler_plate/features/landing/view/landing_screen.dart';
 import 'package:cubit_boiler_plate/features/landing/widget/custom_navigation_bar.dart';
 import 'package:cubit_boiler_plate/features/splash/view/splash_screen.dart';
+import 'package:cubit_boiler_plate/features/video_call/view/video_call_screen.dart';
 import 'package:cubit_boiler_plate/services/navigator_service.dart';
 import 'package:go_router/go_router.dart';
 
@@ -32,6 +33,9 @@ class AppRouting {
 
   static const profile = 'profile';
   static const profilePath = '/$profile';
+
+  static const videoCall = 'video-call';
+  static const videoCallPath = '/$videoCall';
 
   static final GoRouter router = GoRouter(
     navigatorKey: NavigatorService.navigatorKey,
@@ -71,7 +75,11 @@ class AppRouting {
               ),
             )
             .toList(),
-      )
+      ),
+      GoRoute(
+        path: videoCallPath,
+        builder: (context, state) => const VideoCallScreen(),
+      ),
     ],
   );
 }
